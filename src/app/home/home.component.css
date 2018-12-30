@@ -1,0 +1,270 @@
+.feed
+{   
+    height:100%;
+    display:table;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*sets max height to screen height*/
+.row
+{
+    height: 100%;
+    display: table-row;
+}
+
+/*removes max height in mobile view*/
+@media (min-width: 992px) {
+  .row .no-float {
+      display: table-cell;
+      float: none;
+  }
+}
+
+.navOptions {
+   width:100%;
+   height:100%;
+   background-color: #e6e6e6;
+}
+
+@media (max-width: 992px) {
+     .navOptions {
+        padding-top:1px;
+     }
+  }
+
+.navOptionsCol {
+    background-color: #e6e6e6;
+}
+
+ul {
+    list-style: none;
+    padding:0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navOptions ul li {
+   width: 100%;
+}
+
+.navOptionsBtn {
+    color:#595959;
+    width:100%;
+    border-radius: 0px;
+ }
+
+ .navOptionsBtn:hover {
+    background-color: #404040;
+    color:#e6e6e6;
+ }
+
+.navOptionsActive {
+    background-color: #404040;
+    color:#e6e6e6;
+}
+
+.headingColor {
+    color: #404040;
+}
+
+.navOptionsSeparator {
+    background-color: #b3b3b3;
+    height: 1px;
+    padding: 0;
+    margin:0;
+}
+
+.noPaddingCol {
+    padding: 0;
+    margin: 0;
+    max-height: 100%;
+    max-width:0;
+}
+
+@media (max-width: 992px) {
+    .noPaddingCol {
+        max-width:100%;
+    }
+  }
+
+.feedListCol {
+    border-right: 1px solid #e6e6e6;
+}
+
+.feedList {
+    max-height: 100%;
+    overflow: auto;
+    overflow-x:hidden;
+    width:100%;
+}
+
+/*styles the search input*/
+.searchInput {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    background-image: url('assets/images/searchIcon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 10px 20px 10px 40px; 
+    color: #595959;   
+}
+
+/*sets search input placeholder color*/
+/*firefox/chrome*/
+.searchInput::placeholder {
+    color: #b3b3b3;
+}
+
+/* Internet Explorer 10-11 */
+.searchInput:-ms-input-placeholder {
+    color: #b3b3b3;
+ }
+ 
+ /* Microsoft Edge */
+ .earchInput::-ms-input-placeholder {
+    color: #b3b3b3;
+ }
+
+/*removes outline when search input is in focus*/
+.searchInput:focus {
+    outline: none;
+}
+
+.feedListBtn {
+    color:#595959;
+    width:100%;
+    border-radius:0;
+ }
+
+ .feedListBtn:hover {
+    color:#ffffff;
+    background-color:#3399ff;
+ }
+ 
+
+ .feedListOptionsActive a {
+    background-color:#3399ff;
+    color:#ffffff;
+}
+
+.feedListSeparator {
+    background-color: #e6e6e6;
+    height: 1px;
+    padding: 0;
+    margin:0;
+}
+
+.feedContentSeparator {
+    background-color: #e6e6e6;
+    height: 41px;
+    padding: 0;
+    margin:0;
+    margin-top:-30px;
+}
+
+.feedContent {
+    max-height: 100%;
+    overflow: auto;
+    float:left;
+    padding:20px;
+}
+
+.mainTextColor {
+    color:#595959;
+}
+
+.feedList .newsIcon {
+    float:left; 
+    margin-top:-3px;
+}
+
+.feedList h5 {
+    font-weight:bold;
+}
+
+.displayFeedModalHeader {
+    color: #e6e6e6;
+    background-color: #404040;
+}
+
+/*edits scroll bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/*creates loading wheel*/
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+.loader {
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1.1em solid #595959;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+#displayFeedModal {
+    max-height: 100%;
+    overflow: auto;
+}
+
+.ellipsis {
+    white-space: nowrap; 
+    width: 100%; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
